@@ -1,0 +1,8 @@
+# Render work directories (re-creatable with scripts/fetch_outputs.sh --sources and scripts/build.sh)
+clips/
+refs/
+fonts/
+build/
+audio/
+qc/
+__pycache__/

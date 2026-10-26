@@ -1,0 +1,28 @@
+{
+  "_note": "Edit decision list. Times in seconds on the output timeline. 'in' = source in-point, 'speed' = playback rate, 'zoom' = digital push [start, end], 'temp' = colour temperature shift (+ warm / - cool), 'foley_gain' = level of the clip's own generated audio (0 mutes it).",
+  "width": 1080,
+  "height": 1920,
+  "fps": 25,
+  "duration": 15.0,
+  "segments": [
+    {"id": "1A", "scene": 1, "type": "clip", "src": "c01", "start": 0.00, "dur": 1.50, "in": 0.20, "zoom": [1.10, 1.18], "temp": 0.045, "desc": "Wide: man on sofa wipes sweat, AC on wall"},
+    {"id": "1B", "scene": 1, "type": "clip", "src": "c02", "start": 1.50, "dur": 0.70, "in": 1.00, "zoom": [1.00, 1.04], "temp": 0.045, "desc": "Close: AC louver, weak warm air haze"},
+    {"id": "1C", "scene": 1, "type": "clip", "src": "c03", "start": 2.20, "dur": 0.80, "in": 0.40, "zoom": [1.02, 1.06], "temp": 0.040, "desc": "Close: man presses remote, frustrated"},
+    {"id": "2A", "scene": 2, "type": "clip", "src": "c04", "start": 3.00, "dur": 0.70, "in": 1.40, "zoom": [1.00, 1.08], "temp": 0.030, "desc": "Over-the-shoulder: man taps phone"},
+    {"id": "2B", "scene": 2, "type": "gfx", "gfx": "booking", "bg": "c04", "bg_t": 2.1, "start": 3.70, "dur": 1.30, "temp": 0.0, "desc": "Phone UI insert: book a technician, confirmation"},
+    {"id": "3A", "scene": 3, "type": "clip", "src": "c05", "start": 5.00, "dur": 1.00, "in": 0.20, "zoom": [1.00, 1.05], "temp": 0.015, "desc": "Technician arrives with tool case and ladder"},
+    {"id": "3B", "scene": 3, "type": "clip", "src": "c06", "start": 6.00, "dur": 1.00, "in": 1.00, "zoom": [1.04, 1.10], "temp": 0.005, "desc": "Inspection: opens front panel (unit off)"},
+    {"id": "3C", "scene": 3, "type": "clip", "src": "c07", "start": 7.00, "dur": 1.00, "in": 1.40, "zoom": [1.00, 1.04], "temp": 0.0, "desc": "Macro: dusty filter removed"},
+    {"id": "3D", "scene": 3, "type": "clip", "src": "c08", "start": 8.00, "dur": 1.00, "in": 2.00, "speed": 1.2, "zoom": [1.00, 1.04], "temp": -0.005, "desc": "Filter rinsed at sink, away from electronics"},
+    {"id": "3E", "scene": 3, "type": "clip", "src": "c09", "start": 9.00, "dur": 1.00, "in": 0.50, "speed": 1.6, "zoom": [1.00, 1.03], "temp": -0.005, "desc": "Panel closed, unit restarts, technician satisfied"},
+    {"id": "4A", "scene": 4, "type": "clip", "src": "c10", "start": 10.00, "dur": 1.50, "in": 2.80, "zoom": [1.00, 1.07], "temp": -0.01, "desc": "Man relaxes and smiles, AC running"},
+    {"id": "5A", "scene": 5, "type": "clip", "src": "c11", "start": 11.50, "dur": 1.50, "in": 2.70, "zoom": [1.00, 1.03], "temp": -0.005, "overlay": "payment", "foley_gain": 0.0, "desc": "Thumbs-up to technician + phone payment overlay"},
+    {"id": "5B", "scene": 5, "type": "gfx", "gfx": "endcard", "bg": "c10", "bg_t": 4.6, "start": 13.00, "dur": 2.00, "temp": 0.0, "xfade": 0.24, "desc": "End card: logo, tagline, CTA, contact"}
+  ],
+  "supers": [
+    {"text": "المكيف ما يبرّد؟", "start": 0.25, "end": 2.95},
+    {"text": "فني محترف لباب بيتك", "start": 5.08, "end": 5.96},
+    {"chips": ["فحص", "تنظيف", "تشغيل"], "active": [[6.0, 7.0, 0], [7.0, 9.0, 1], [9.0, 10.0, 2]], "start": 6.0, "end": 9.96},
+    {"text": "رجعت الراحة", "start": 10.15, "end": 11.45}
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "_note": "Placeholder brand values. Replace them with the real company identity, then re-run scripts/build.sh. Empty strings render as bracketed placeholders.",
+  "company_name": "",
+  "logo_path": "",
+  "tagline": "راحتك أولويتنا",
+  "subline": "صيانة وتنظيف مكيفات باحترافية",
+  "cta": "اطلب خدمتك الآن",
+  "phone": "",
+  "website": "",
+  "colors": {
+    "primary": "#0E7C86",
+    "primary_dark": "#0A4F57",
+    "accent": "#F2B544",
+    "success": "#1F9D63",
+    "ink": "#17212B",
+    "muted": "#6B7785",
+    "surface": "#F4F7F8"
+  },
+  "fonts": {
+    "bold": "fonts/Tajawal-Bold.ttf",
+    "black": "fonts/Tajawal-ExtraBold.ttf",
+    "medium": "fonts/Tajawal-Medium.ttf"
+  }
+}
