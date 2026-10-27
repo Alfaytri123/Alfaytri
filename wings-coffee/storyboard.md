@@ -208,3 +208,23 @@
 | [`references/beans-cooling-tray.jpg`](references/beans-cooling-tray.jpg) | اللقطات 01–03 |
 | [`references/barista-with-bag.jpg`](references/barista-with-bag.jpg) | اللقطات 04–06 |
 | [`references/bags.jpg`](references/bags.jpg) | اللقطتان 07–08 |
+
+## الستوري بورد المرئي (Higgsfield)
+
+لوحة الستوري بورد المرئية: [wings-storyboard-sheet.jpg](https://d2ol7oe51mr4n9.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/87b63712-d24b-4905-a5d6-9fc2900eaa58.jpg)
+(3480×4534، ثماني لقطات مع التوقيت والكاميرا والنص والتعليق الصوتي)
+
+الإطارات منفصلة (9:16، 1520×2688). وُلّدت بنموذج GPT Image 2.5 اعتماداً على الصور الحقيقية الثلاث:
+
+| اللقطة | الإطار |
+|---|---|
+| 01 الحبوب تنهمر | [عرض](https://d8j0ntlcm91z4.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/hf_20261027_151813_6aed30af-fb6e-4580-bead-594a5047d63f.png) |
+| 02 صينية التبريد | [عرض](https://d8j0ntlcm91z4.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/hf_20261027_151812_970a2791-3ef9-4407-a2d8-ab4e745f53f8.png) |
+| 03 حبّة تحت الضوء | [عرض](https://d8j0ntlcm91z4.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/hf_20261027_151814_7b64d033-958a-4368-9408-7250accf8d55.png) |
+| 04 المحمِّص يفحص | [عرض](https://d8j0ntlcm91z4.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/hf_20261027_151814_17904d97-7c94-499a-aea3-786289171d3c.png) |
+| 05 التعبئة | [عرض](https://d8j0ntlcm91z4.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/hf_20261027_151813_a4d3ceda-5723-4579-b26a-117b3cb0578f.png) |
+| 06 الكيس والشعار | [عرض](https://d8j0ntlcm91z4.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/hf_20261027_151814_0917b0e8-49f7-4a72-93ef-412798cbf51f.png) |
+| 07 المنتج الجاهز | [عرض](https://d8j0ntlcm91z4.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/hf_20261027_151814_f339c394-1133-4ec0-a646-a7ebc3d767f2.png) |
+| 08 دعوة للشراء | [عرض](https://d8j0ntlcm91z4.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/hf_20261027_151811_1942339a-95f3-47af-b2c0-91d35c7977ec.png) |
+
+> هذه الإطارات توضيحية مولّدة بالذكاء الاصطناعي، وليست لقطات من التصوير الفعلي. الشعار المرسوم على الأكياس تقريبي (خاصة في اللقطتين 06 و08)، ويُستخدم ملف الشعار الأصلي في الإنتاج.
