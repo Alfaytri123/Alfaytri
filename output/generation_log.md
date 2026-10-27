@@ -51,3 +51,23 @@ Failed keyframe jobs (no reason returned, no output): `034f9c31-…`, `08994c9f-
 | c10 | Stylised blue "cold air" rays in the first 2 s (brief: no artificial blue) | Used 2.8–4.3 s, after the rays have faded |
 | c11 | Kling's generated audio includes a spoken "Cheers." (found with Whisper) | Clip audio muted (`foley_gain: 0`); designed SFX used instead |
 | c04 | Generated phone screen shows gibberish UI | Shown only as an out-of-focus over-the-shoulder shot; the readable UI is the code-rendered insert |
+
+## Version 2: Al Faytri uniform and pressure-washer cleaning (2026-10-27)
+
+The technician was re-dressed in the real staff polo (orange body, charcoal sleeves, collar and hem, chest logo) using the client's photos, uploaded to Higgsfield as `9cfbc45e-4590-4158-aa6f-212ab182a374` (front) and `ee82187e-4602-4ac4-8af9-41c8244e34e2` (back). The "TEAM LEADER" patch and small print were left off on purpose: generated fine text comes out garbled.
+
+The first restyle printed the chest wordmark as "AL FAYTRI". At the client's request (no spaces) every technician keyframe was edited again to read **ALFAYTRI**, checked at full resolution, then re-animated. The filter-rinse shot was also replaced with a pressure-washer gun on a tiled balcony with a floor drain (client request).
+
+| Shot | Final keyframe job | Final video job | Notes |
+|---|---|---|---|
+| Technician reference v2 | `2367c683-5c4e-4c6f-8696-ccc2b3bdbd48` | – | Same face as `551f620f-…`, wearing the uniform |
+| c05 arrival | `88ef7e40-3c97-4681-bd90-1601a09c3f83` | `1b6175df-828f-4355-a54f-25bfe6e295f4` | Uniform + ALFAYTRI |
+| c06 inspection | `d6c42bb0-04dd-4f3f-a809-c2df4da8e3d6` | `3fc8e2da-1016-42e4-ae4a-65c1cda2381c` | Uniform + ALFAYTRI |
+| c07 filter out | `d568afc3-b9c0-4dea-8bdb-aaa0deaec93c` | `dc9f1915-862d-4281-a000-583741950fb3` | Sleeve only, no logo in frame |
+| c08 pressure washer | `40b47577-a7d4-43f3-b77f-4af3b3e0ca9a` | `9c540f98-e497-4915-ab0d-20e30bcae544` | New shot. A dark smear forms after about 2.5 s, so only 0.2–1.2 s is used |
+| c09 close + restart | `0ea74eff-c27c-4b0e-ac5d-3fd06d4d5cfe` | `94d6fbb2-05b4-415b-bfa1-57adf3332315` | Uniform + ALFAYTRI |
+| c11 thumbs-up | `c9da63a6-5230-474d-8845-b6258391c661` | `2c6bf299-8272-41aa-a1a6-0b064e418011` | Uniform + ALFAYTRI. Clip audio muted as before |
+
+Superseded intermediate jobs (uniform with "AL FAYTRI", and the sink version of c08): keyframes `8de30422-…`, `b58ab8f3-…`, `553f44c2-…`, `df62d4ad-…`, `5bf31e24-…`, `ea3db993-…`; videos `6454d0c9-…`, `77433ea5-…`, `67516369-…`, `7d5af41a-…`, `5b28f95c-…`.
+
+Cost of version 2: 136 credits (balance 2,862 → 2,726).

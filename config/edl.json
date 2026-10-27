@@ -13,7 +13,7 @@
     {"id": "3A", "scene": 3, "type": "clip", "src": "c05", "start": 5.00, "dur": 1.00, "in": 0.20, "zoom": [1.00, 1.05], "temp": 0.015, "desc": "Technician arrives with tool case and ladder"},
     {"id": "3B", "scene": 3, "type": "clip", "src": "c06", "start": 6.00, "dur": 1.00, "in": 1.00, "zoom": [1.04, 1.10], "temp": 0.005, "desc": "Inspection: opens front panel (unit off)"},
     {"id": "3C", "scene": 3, "type": "clip", "src": "c07", "start": 7.00, "dur": 1.00, "in": 1.40, "zoom": [1.00, 1.04], "temp": 0.0, "desc": "Macro: dusty filter removed"},
-    {"id": "3D", "scene": 3, "type": "clip", "src": "c08", "start": 8.00, "dur": 1.00, "in": 2.00, "speed": 1.2, "zoom": [1.00, 1.04], "temp": -0.005, "desc": "Filter rinsed at sink, away from electronics"},
+    {"id": "3D", "scene": 3, "type": "clip", "src": "c08", "start": 8.00, "dur": 1.00, "in": 0.20, "zoom": [1.00, 1.04], "temp": -0.005, "desc": "Filter cleaned with a pressure-washer gun on the balcony, away from electronics"},
     {"id": "3E", "scene": 3, "type": "clip", "src": "c09", "start": 9.00, "dur": 1.00, "in": 0.50, "speed": 1.6, "zoom": [1.00, 1.03], "temp": -0.005, "desc": "Panel closed, unit restarts, technician satisfied"},
     {"id": "4A", "scene": 4, "type": "clip", "src": "c10", "start": 10.00, "dur": 1.50, "in": 2.80, "zoom": [1.00, 1.07], "temp": -0.01, "desc": "Man relaxes and smiles, AC running"},
     {"id": "5A", "scene": 5, "type": "clip", "src": "c11", "start": 11.50, "dur": 1.50, "in": 2.70, "zoom": [1.00, 1.03], "temp": -0.005, "overlay": "payment", "foley_gain": 0.0, "desc": "Thumbs-up to technician + phone payment overlay"},

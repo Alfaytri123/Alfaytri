@@ -1,6 +1,6 @@
-# «من الحر إلى الراحة»: إعلان صيانة وتنظيف مكيفات (9:16، 15 ثانية)
+# «من الحر إلى الراحة»: إعلان الفيتري لصيانة وتنظيف المكيفات (9:16، 15 ثانية)
 
-إعلان سينمائي قصير لشركة صيانة مكيفات في قطر، معدّ لـ Instagram Reels وTikTok وSnapchat. **الفيديو أُنتج فعلياً وفُحص** (ليس خطة فقط).
+إعلان سينمائي قصير لشركة **الفيتري (ALFAYTRI)** لصيانة المكيفات في قطر، معدّ لـ Instagram Reels وTikTok وSnapchat. **الفيديو أُنتج فعلياً وفُحص** (ليس خطة فقط).
 
 | | |
 |---|---|
@@ -16,11 +16,12 @@
 
 | الملف | الوصف | الرابط |
 |---|---|---|
-| `heat-to-comfort_9x16_1080x1920.mp4` | النسخة الرئيسية (23 Mbps، 44 MB) | [تنزيل](https://d2ol7oe51mr4n9.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/74bde6ab-900c-4c50-9f4e-69c6d673c402.mp4) |
-| `heat-to-comfort_9x16_social.mp4` | نسخة الرفع للمنصات (11.5 Mbps، 22 MB) | [تنزيل](https://d2ol7oe51mr4n9.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/50f28435-5fa9-4122-b3cc-462bc60ecb9b.mp4) |
-| `storyboard.jpg` | لوحة Storyboard للمشاهد الخمسة من إطارات المونتاج النهائي | [عرض](https://d2ol7oe51mr4n9.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/ce331a2d-dce3-425c-9679-6c8b43cc07d8.jpg) |
-| `qc_contact_sheet.jpg` | 14 إطاراً للفحص البصري | [عرض](https://d2ol7oe51mr4n9.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/4ccd055d-ed38-4196-9e80-00028889f544.jpg) |
-| `audio_stems.zip` | الموسيقى، المؤثرات، أصوات المقاطع، والمزج النهائي (WAV) | [تنزيل](https://d2ol7oe51mr4n9.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/46b8fc25-0af7-476f-913c-17753a1ff831.zip) |
+| `heat-to-comfort_9x16_1080x1920.mp4` | النسخة الرئيسية (23 Mbps، 44 MB) | [تنزيل](https://d2ol7oe51mr4n9.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/d8fdb4ac-1105-4e8f-bc7b-e2eb4c1a860c.mp4) |
+| `heat-to-comfort_9x16_social.mp4` | نسخة الرفع للمنصات (11.5 Mbps، 22 MB) | [تنزيل](https://d2ol7oe51mr4n9.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/736ba957-30e7-41cb-8044-83d8d4506b83.mp4) |
+| `storyboard.jpg` | لوحة Storyboard للمشاهد الخمسة من إطارات المونتاج النهائي | [عرض](https://d2ol7oe51mr4n9.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/73314dc6-1f07-4dd5-8387-3ba8837724b1.jpg) |
+| `qc_contact_sheet.jpg` | 14 إطاراً للفحص البصري | [عرض](https://d2ol7oe51mr4n9.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/f081270f-51ae-408f-a778-fa42183eab9e.jpg) |
+| `audio_stems.zip` | الموسيقى، المؤثرات، أصوات المقاطع، والمزج النهائي (WAV) | [تنزيل](https://d2ol7oe51mr4n9.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/95a25e8c-5612-4189-ac90-ece51365ae7c.zip) |
+| `alfaytri_logo_interim.zip` | الشعار المؤقت (أبيض/فحمي/برتقالي، PNG شفاف) | [تنزيل](https://d2ol7oe51mr4n9.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/d0b7699e-6ac8-4753-be11-ee1fb6729b6d.zip) |
 
 الوثائق داخل المستودع:
 
@@ -39,7 +40,7 @@
 5. **الصوت:** `scripts/audio_design.py`. موسيقى أصلية مؤلفة بالكود (D major، 120 BPM: توتر ← تصاعد ← إيقاع ← انفراج ← وتر ختامي)، ومؤثرات مصممة، ومزج مع أصوات المقاطع، ثم معايرة الجهارة على −14 LUFS.
 6. **الدمج والفحص:** `scripts/build.sh` يدمج الصورة والصوت ثم يشغّل `scripts/qc.py` و`scripts/storyboard.py`.
 
-**التكلفة:** 138 رصيداً من رصيد Higgsfield الموجود (3,000 ← 2,862). لم يتم أي شراء.
+**التكلفة:** 274 رصيداً من رصيد Higgsfield الموجود: 138 للنسخة الأولى و136 لنسخة الزي والهوية (3,000 ← 2,726). لم يتم أي شراء.
 
 ## إعادة البناء
 
@@ -50,23 +51,27 @@ scripts/build.sh .                   # يعيد إنتاج output/*.mp4 والف
 
 المتطلبات: `ffmpeg`، Python 3 مع `numpy` و`scipy` و`Pillow` (مع دعم libraqm للعربية). اختياري: `faster-whisper` للتحقق من عدم وجود كلام.
 
-## استبدال الهوية المؤقتة
+## الهوية التجارية: الفيتري (ALFAYTRI)
 
-لم أخترع هوية تجارية. كل عناصر العلامة مكانية وتُستبدل من ملف واحد هو [`config/brand.json`](config/brand.json):
+كل عناصر العلامة في ملف واحد هو [`config/brand.json`](config/brand.json). المصدر هو صور زي الموظفين في [`assets/brand/`](assets/brand/):
 
-| الحقل | الحالي | يظهر في |
+| الحقل | القيمة | يظهر في |
 |---|---|---|
-| `company_name` | `[اسم الشركة]` | رأس واجهة التطبيق |
-| `logo_path` | مربع «شعار الشركة» | بطاقة النهاية. ضع مسار PNG شفاف |
-| `phone` / `website` | `[رقم التواصل]` / `[الموقع الإلكتروني]` | بطاقة النهاية |
-| `colors` | تركواز `#0E7C86` + ذهبي `#F2B544` | الواجهات والنصوص والبطاقة |
-| `tagline` / `subline` / `cta` | «راحتك أولويتنا» / «صيانة وتنظيف مكيفات باحترافية» / «اطلب خدمتك الآن» | بطاقة النهاية |
+| `company_name` | «الفيتري» | رأس واجهة التطبيق |
+| `logo_path` / `icon_path` | الشعار المؤقت من `scripts/brand_logo.py` | بطاقة النهاية / رأس الواجهة |
+| `phone` / `whatsapp` | 4419-0600 / 5022-4440 | بطاقة النهاية |
+| `colors` | برتقالي `#EE8A2F` + فحمي `#2E2F32`، مأخوذان من القميص | الواجهات والنصوص والبطاقة |
+| `tagline` / `subline` / `cta` | «مع الفيتري خلك ضامن» / «صيانة وتنظيف مكيفات باحترافية» / «اطلب خدمتك الآن» | بطاقة النهاية |
 
-بعد التعديل شغّل `scripts/build.sh .`، ولا حاجة لإعادة توليد أي مقطع.
+**زي الفني:** يرتدي في كل لقطاته قميص الشركة البرتقالي بأكمام وياقة فحمية والشعار على الصدر. حُذفت شارة «TEAM LEADER» والنصوص الصغيرة لأن التوليد يشوّه الكتابة الدقيقة.
+
+**الشعار مؤقت:** الشعار المطبوع على القميص صغير جداً (حوالي 130 بكسل) فلا يمكن نسخه بدقة، والنسخ الآلي أسقط نقاط «الفيتري». لذلك أعدت رسم الأيقونة (البيت والمفك والمفتاح) بأشكال هندسية مقاسة من الصورة، وكتبت تحتها «ALFAYTRI» و«الفيتري» بخط Tajawal، كل منهما كلمة واحدة بلا مسافة. عند توفر ملف الشعار الرسمي (PNG شفاف أو SVG) ضع مساره في `logo_path` و`icon_path`.
+
+بعد أي تعديل شغّل `scripts/build.sh .`، ولا حاجة لإعادة توليد أي مقطع.
 
 ## عناصر ما زالت ناقصة
 
-1. **بيانات الشركة الحقيقية:** الاسم والشعار والألوان الرسمية والرقم والموقع.
+1. **ملف الشعار الرسمي** لاستبدال النسخة المعاد رسمها، والموقع الإلكتروني إن وُجد.
 2. **واجهة التطبيق الحقيقية إن وُجدت:** الواجهتان الحاليتان تجريبيتان، وعليهما «عرض توضيحي • بيانات تجريبية». مزوّد الدفع عام («بطاقة بنكية»)، والمبلغ `--- ر.ق`، ولا يوجد رمز QR.
 3. **السعر الفعلي** إن رغبتم بإظهاره.
 4. **تنزيل الملفات إلى المستودع:** يحتاج السماح بالمضيف `d2ol7oe51mr4n9.cloudfront.net` (ومعه `d8j0ntlcm91z4.cloudfront.net` و`github.com` لإعادة البناء) في إعدادات الشبكة للبيئة، ثم تشغيل `scripts/fetch_outputs.sh`.

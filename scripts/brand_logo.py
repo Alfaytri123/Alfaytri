@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """Interim Al Faytri logo: the house + screwdriver + wrench icon redrawn as clean
 geometry measured from the staff polo print (assets/brand/uniform_back.jpg), with
-the "AL FAYTRI / الفيتري" wordmark typeset under it.
+the "ALFAYTRI / الفيتري" wordmark typeset under it (no spaces in either word).
 
 The print is too small (~130 px) to trace cleanly. Replace this with the official
 logo file as soon as it is available: set "logo_path" in config/brand.json to a
 transparent PNG and compose.py uses that file instead.
 
-Usage: brand_logo.py WORKDIR   -> writes WORKDIR/assets/brand/logo_{white,charcoal}.png
+Usage: brand_logo.py WORKDIR
+Writes WORKDIR/assets/brand/{logo,icon}_{white,charcoal,orange}.png
 """
 import json
 import os
@@ -67,7 +68,7 @@ def logo(work, color, width=520):
     out.alpha_composite(icon, ((width - icon.width) // 2, 0))
     d = ImageDraw.Draw(out)
     y = icon.height + int(width * 0.04)
-    d.text((width / 2, y), "AL FAYTRI", font=f_lat, fill=color, anchor="mt")
+    d.text((width / 2, y), "ALFAYTRI", font=f_lat, fill=color, anchor="mt")  # one word, no space
     d.text((width / 2, y + int(width * 0.22)), "الفيتري", font=f_ar, fill=color, anchor="mt",
            direction="rtl", language="ar")
     return out.crop(out.getbbox())
@@ -76,7 +77,10 @@ def logo(work, color, width=520):
 if __name__ == "__main__":
     work = os.path.abspath(sys.argv[1] if len(sys.argv) > 1 else ".")
     os.makedirs(os.path.join(work, "assets/brand"), exist_ok=True)
-    for name, col in (("white", (255, 255, 255, 255)), ("charcoal", (58, 58, 60, 255))):
+    brand = json.load(open(os.path.join(work, "config/brand.json"), encoding="utf-8"))
+    h = brand["colors"]["primary"].lstrip("#")
+    orange = tuple(int(h[i:i + 2], 16) for i in (0, 2, 4)) + (255,)
+    for name, col in (("white", (255, 255, 255, 255)), ("charcoal", (58, 58, 60, 255)), ("orange", orange)):
         logo(work, col).save(os.path.join(work, "assets/brand", f"logo_{name}.png"))
         draw_icon(480, col).save(os.path.join(work, "assets/brand", f"icon_{name}.png"))
     print("logo written")

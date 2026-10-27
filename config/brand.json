@@ -1,20 +1,22 @@
 {
-  "_note": "Placeholder brand values. Replace them with the real company identity, then re-run scripts/build.sh. Empty strings render as bracketed placeholders.",
-  "company_name": "",
-  "logo_path": "",
-  "tagline": "راحتك أولويتنا",
+  "_note": "Al Faytri brand values. Colours sampled from the staff polo. logo_path/icon_path point at the interim logo drawn by scripts/brand_logo.py; swap in the official files when available, then re-run scripts/build.sh.",
+  "company_name": "الفيتري",
+  "logo_path": "assets/brand/logo_white.png",
+  "icon_path": "assets/brand/icon_orange.png",
+  "tagline": "مع الفيتري خلك ضامن",
   "subline": "صيانة وتنظيف مكيفات باحترافية",
   "cta": "اطلب خدمتك الآن",
-  "phone": "",
+  "phone": "4419-0600",
+  "whatsapp": "5022-4440",
   "website": "",
   "colors": {
-    "primary": "#0E7C86",
-    "primary_dark": "#0A4F57",
-    "accent": "#F2B544",
+    "primary": "#EE8A2F",
+    "primary_dark": "#2E2F32",
+    "accent": "#EE8A2F",
     "success": "#1F9D63",
-    "ink": "#17212B",
-    "muted": "#6B7785",
-    "surface": "#F4F7F8"
+    "ink": "#1E2024",
+    "muted": "#6E727A",
+    "surface": "#F6F5F3"
   },
   "fonts": {
     "bold": "fonts/Tajawal-Bold.ttf",

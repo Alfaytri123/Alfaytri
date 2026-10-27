@@ -33,6 +33,19 @@ def hexrgb(h, a=255):
     return (int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16), a)
 
 
+def tint(h, k):
+    """Brand colour h mixed into white; k = share of the colour."""
+    c = hexrgb(h)
+    return tuple(int(255 + (c[i] - 255) * k) for i in range(3)) + (255,)
+
+
+def brand_image(key):
+    path = BRAND.get(key)
+    if path and os.path.exists(os.path.join(WORK, path)):
+        return Image.open(os.path.join(WORK, path)).convert("RGBA")
+    return None
+
+
 # ---------------------------------------------------------------- typography
 _fonts = {}
 
@@ -169,16 +182,21 @@ def status_bar(d, dark=False):
     d.rectangle((x + 56, 56, x + 60, 68), fill=col)
 
 
-def app_header(d, title_sub):
+def app_header(img, d, title_sub):
+    c = hexrgb(C["primary_dark"])
     for i in range(330):
-        k = i / 330
-        c1, c2 = hexrgb(C["primary"]), hexrgb(C["primary_dark"])
-        d.line((0, i, SW, i), fill=tuple(int(c1[j] * (1 - k) + c2[j] * k) for j in range(3)))
+        k = 1 - 0.25 * i / 330
+        d.line((0, i, SW, i), fill=tuple(int(c[j] * k) for j in range(3)))
+    d.rectangle((0, 322, SW, 330), fill=hexrgb(C["primary"]))
     status_bar(d)
-    # logo placeholder
     cx, cy = SW - 110, 205
     d.ellipse((cx - 56, cy - 56, cx + 56, cy + 56), fill=(255, 255, 255, 255))
-    text(d, (cx, cy + 2), "شعار", "bold", 28, hexrgb(C["primary"]))
+    icon = brand_image("icon_path")
+    if icon:
+        icon.thumbnail((74, 74), Image.LANCZOS)
+        img.alpha_composite(icon, (int(cx - icon.width / 2), int(cy - icon.height / 2)))
+    else:
+        text(d, (cx, cy + 2), "شعار", "bold", 28, hexrgb(C["primary"]))
     text(d, (cx - 84, cy - 22), placeholder(BRAND["company_name"], "اسم الشركة"), "black", 42,
          (255, 255, 255, 255), anchor="rm")
     text(d, (cx - 84, cy + 30), title_sub, "medium", 30, (220, 240, 242, 255), anchor="rm")
@@ -206,7 +224,7 @@ def check(d, cx, cy, r, col, w):
 def card(d, box, selected):
     x0, y0, x1, y1 = box
     if selected:
-        d.rounded_rectangle(box, 30, fill=(230, 244, 245, 255), outline=hexrgb(C["primary"]), width=5)
+        d.rounded_rectangle(box, 30, fill=tint(C["primary"], 0.12), outline=hexrgb(C["primary"]), width=5)
     else:
         d.rounded_rectangle(box, 30, fill=(255, 255, 255, 255), outline=(222, 228, 232, 255), width=3)
 
@@ -218,7 +236,7 @@ def demo_label(d, y):
 def booking_screen(t):
     img = Image.new("RGBA", (SW, SH), hexrgb(C["surface"]))
     d = ImageDraw.Draw(img)
-    app_header(d, "صيانة وتنظيف المكيفات")
+    app_header(img, d, "صيانة وتنظيف المكيفات")
     text(d, (SW - 48, 400), "اختر الخدمة", "black", 44, hexrgb(C["ink"]), anchor="rm")
     items = [("تنظيف مكيف سبليت", "تنظيف الفلاتر والوحدة الداخلية", True),
              ("فحص وصيانة", "تشخيص المشكلة وفحص الأداء", False),
@@ -282,7 +300,7 @@ def booking_screen(t):
 def payment_screen(t):
     img = Image.new("RGBA", (SW, SH), hexrgb(C["surface"]))
     d = ImageDraw.Draw(img)
-    app_header(d, "الدفع الإلكتروني")
+    app_header(img, d, "الدفع الإلكتروني")
     text(d, (SW - 48, 400), "ملخص الطلب", "black", 44, hexrgb(C["ink"]), anchor="rm")
     d.rounded_rectangle((36, 460, SW - 36, 800), 30, fill=(255, 255, 255, 255), outline=(222, 228, 232, 255), width=3)
     rows = [("الخدمة", "تنظيف مكيف سبليت"), ("الحالة", "تم الإنجاز"), ("المبلغ", "--- ر.ق")]
@@ -293,7 +311,7 @@ def payment_screen(t):
         if i < 2:
             d.line((76, y + 52, SW - 76, y + 52), fill=(232, 236, 239, 255), width=2)
     y0 = 850
-    d.rounded_rectangle((36, y0, SW - 36, y0 + 140), 30, fill=(230, 244, 245, 255), outline=hexrgb(C["primary"]), width=5)
+    d.rounded_rectangle((36, y0, SW - 36, y0 + 140), 30, fill=tint(C["primary"], 0.12), outline=hexrgb(C["primary"]), width=5)
     cx = SW - 120
     d.rounded_rectangle((cx - 48, y0 + 38, cx + 48, y0 + 102), 12, fill=hexrgb(C["primary"]))
     d.rectangle((cx - 48, y0 + 54, cx + 48, y0 + 66), fill=hexrgb(C["primary_dark"]))
@@ -428,22 +446,20 @@ def endcard_frame(seg, t, prev_rgb):
         bg = blurred_bg(seg).convert("RGBA")
         grad = Image.new("RGBA", (W, H))
         gd = ImageDraw.Draw(grad)
-        c1, c2 = hexrgb(C["primary_dark"]), hexrgb(C["primary"])
+        c = hexrgb(C["primary_dark"])
         for yy in range(H):
-            k = yy / H
-            gd.line((0, yy, W, yy), fill=(int(c1[0] * (1 - k) + c2[0] * k), int(c1[1] * (1 - k) + c2[1] * k),
-                                          int(c1[2] * (1 - k) + c2[2] * k), int(205 + 30 * k)))
+            k = 1 - 0.35 * yy / H
+            gd.line((0, yy, W, yy), fill=(int(c[0] * k), int(c[1] * k), int(c[2] * k), 228))
         _cache[key] = Image.alpha_composite(bg, grad)
     img = _cache[key].copy()
     d = ImageDraw.Draw(img)
     white = lambda a: (255, 255, 255, int(255 * a))
-    # logo placeholder (or the real logo if supplied)
+    # logo (or a placeholder if none is configured)
     a = ease_out(prog(t, 0.10, 0.40))
-    cy = 640 - 30 * (1 - a)
-    logo = BRAND.get("logo_path")
-    if logo and os.path.exists(os.path.join(WORK, logo)):
-        lg = Image.open(os.path.join(WORK, logo)).convert("RGBA")
-        lg.thumbnail((340, 340))
+    cy = 600 - 30 * (1 - a)
+    lg = brand_image("logo_path")
+    if lg:
+        lg.thumbnail((300, 440), Image.LANCZOS)
         lg.putalpha(lg.getchannel("A").point(lambda v: int(v * a)))
         img.alpha_composite(lg, (int(W / 2 - lg.width / 2), int(cy - lg.height / 2)))
     else:
@@ -452,22 +468,30 @@ def endcard_frame(seg, t, prev_rgb):
         snowflake(d, W / 2, cy - 34, 48, white(a), 8)
         text(d, (W / 2, cy + 62), "شعار الشركة", "bold", 40, white(0.9 * a))
     a = ease_out(prog(t, 0.22, 0.52))
-    y = 930 + 40 * (1 - a)
-    text(d, (W / 2, y), BRAND["tagline"], "black", 132, white(a))
-    d.rounded_rectangle((W / 2 - 70, y + 92, W / 2 + 70, y + 102), 5, fill=hexrgb(C["accent"], int(255 * a)))
+    y = 960 + 40 * (1 - a)
+    tag = BRAND["tagline"]
+    tag_size = min(112, int(112 * 940 / max(text_w(tag, "black", 112), 1)))
+    text(d, (W / 2, y), tag, "black", tag_size, white(a))
+    d.rounded_rectangle((W / 2 - 70, y + 86, W / 2 + 70, y + 96), 5, fill=hexrgb(C["accent"], int(255 * a)))
     a = ease_out(prog(t, 0.34, 0.62))
-    text(d, (W / 2, 1120 + 30 * (1 - a)), BRAND["subline"], "medium", 54, white(0.92 * a))
+    text(d, (W / 2, 1140 + 30 * (1 - a)), BRAND["subline"], "medium", 54, white(0.92 * a))
     a = ease_out(prog(t, 0.46, 0.74))
     pulse = 1 + 0.025 * math.sin(max(t - 0.9, 0) * 2 * math.pi * 1.6) * (t > 0.9)
     cta = BRAND["cta"]
     bw = (text_w(cta, "black", 56) + 130) * pulse
     bh = 128 * pulse
-    by = 1300 + 30 * (1 - a)
-    d.rounded_rectangle((W / 2 - bw / 2, by - bh / 2, W / 2 + bw / 2, by + bh / 2), bh / 2, fill=white(a))
-    text(d, (W / 2, by + 4), cta, "black", int(56 * pulse), hexrgb(C["primary_dark"], int(255 * a)))
+    by = 1310 + 30 * (1 - a)
+    d.rounded_rectangle((W / 2 - bw / 2, by - bh / 2, W / 2 + bw / 2, by + bh / 2), bh / 2, fill=hexrgb(C["primary"], int(255 * a)))
+    text(d, (W / 2, by + 4), cta, "black", int(56 * pulse), white(a))
     a = ease_out(prog(t, 0.58, 0.86))
-    contact = f"{placeholder(BRAND['phone'], 'رقم التواصل')}   •   {placeholder(BRAND['website'], 'الموقع الإلكتروني')}"
-    text(d, (W / 2, 1450 + 20 * (1 - a)), contact, "bold", 40, white(0.88 * a))
+    # LTR-isolate numbers and URLs, otherwise the bidi pass flips "4419-0600" into "0600-4419"
+    ltr = lambda s: f"\u2066{s}\u2069"
+    items = [f"هاتف {ltr(BRAND['phone']) if BRAND.get('phone') else '[رقم التواصل]'}"]
+    if BRAND.get("whatsapp"):
+        items.append(f"واتساب {ltr(BRAND['whatsapp'])}")
+    if BRAND.get("website"):
+        items.append(ltr(BRAND["website"]))
+    text(d, (W / 2, 1460 + 20 * (1 - a)), "   •   ".join(items), "bold", 44, white(0.9 * a))
     rgb = img.convert("RGB")
     xf = seg.get("xfade", 0)
     if prev_rgb is not None and t < xf:

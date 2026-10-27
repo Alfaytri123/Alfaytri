@@ -5,6 +5,7 @@ set -euo pipefail
 W="$(cd "${1:-.}" && pwd)"
 OUT="$W/output/heat-to-comfort_9x16_1080x1920.mp4"
 
+python3 "$W/scripts/brand_logo.py" "$W"   # interim logo PNGs (skipped in effect once logo_path points at the official file)
 python3 "$W/scripts/compose.py" "$W"
 python3 "$W/scripts/audio_design.py" "$W"
 mkdir -p "$W/output"
