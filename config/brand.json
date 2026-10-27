@@ -1,8 +1,8 @@
 {
-  "_note": "Al Faytri brand values. Colours sampled from the staff polo. logo_path/icon_path point at the interim logo drawn by scripts/brand_logo.py; swap in the official files when available, then re-run scripts/build.sh.",
+  "_note": "Al Faytri brand values. Colours sampled from the staff polo. logo_path/icon_path are made from the official logo (assets/brand/alfaytri_logo_official.jpg) by scripts/official_logo.py.",
   "company_name": "الفيتري",
-  "logo_path": "assets/brand/logo_white.png",
-  "icon_path": "assets/brand/icon_orange.png",
+  "logo_path": "assets/brand/official/logo_white.png",
+  "icon_path": "assets/brand/official/icon_orange.png",
   "tagline": "مع الفيتري خلك ضامن",
   "subline": "صيانة وتنظيف مكيفات باحترافية",
   "cta": "اطلب خدمتك الآن",

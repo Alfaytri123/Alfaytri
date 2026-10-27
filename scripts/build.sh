@@ -5,7 +5,11 @@ set -euo pipefail
 W="$(cd "${1:-.}" && pwd)"
 OUT="$W/output/heat-to-comfort_9x16_1080x1920.mp4"
 
-python3 "$W/scripts/brand_logo.py" "$W"   # interim logo PNGs (skipped in effect once logo_path points at the official file)
+if [ -f "$W/assets/brand/alfaytri_logo_official.jpg" ]; then
+  python3 "$W/scripts/official_logo.py" "$W/assets/brand/alfaytri_logo_official.jpg" "$W"
+else
+  python3 "$W/scripts/brand_logo.py" "$W"   # interim redrawn logo
+fi
 python3 "$W/scripts/compose.py" "$W"
 python3 "$W/scripts/audio_design.py" "$W"
 mkdir -p "$W/output"
