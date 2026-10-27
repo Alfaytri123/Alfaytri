@@ -223,9 +223,9 @@
 | 03 حبّة تحت الضوء | [عرض](https://d8j0ntlcm91z4.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/hf_20261027_151814_7b64d033-958a-4368-9408-7250accf8d55.png) |
 | 04 المحمِّص يفحص | [عرض](https://d8j0ntlcm91z4.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/hf_20261027_151814_17904d97-7c94-499a-aea3-786289171d3c.png) |
 | 05 التعبئة | [عرض](https://d8j0ntlcm91z4.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/hf_20261027_151813_a4d3ceda-5723-4579-b26a-117b3cb0578f.png) |
-| 06 الكيس والشعار | [عرض](https://d8j0ntlcm91z4.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/hf_20261027_151814_0917b0e8-49f7-4a72-93ef-412798cbf51f.png) |
+| 06 الكيس والشعار | [عرض](https://d8j0ntlcm91z4.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/hf_20261027_153007_5675a92d-fd2c-473d-8026-0eae050c61e4.png) |
 | 07 المنتج الجاهز | [عرض](https://d8j0ntlcm91z4.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/hf_20261027_151814_f339c394-1133-4ec0-a646-a7ebc3d767f2.png) |
-| 08 دعوة للشراء | [عرض](https://d8j0ntlcm91z4.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/hf_20261027_151811_1942339a-95f3-47af-b2c0-91d35c7977ec.png) |
+| 08 دعوة للشراء | [عرض](https://d8j0ntlcm91z4.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/hf_20261027_153008_8c9081b7-e7e8-4c92-8de8-02c764cadfc6.png) |
 
 > هذه الإطارات توضيحية مولّدة بالذكاء الاصطناعي، وليست لقطات من التصوير الفعلي. الشعار المرسوم على الأكياس تقريبي (خاصة في اللقطتين 06 و08)، ويُستخدم ملف الشعار الأصلي في الإنتاج.
 
