@@ -71,3 +71,7 @@ The first restyle printed the chest wordmark as "AL FAYTRI". At the client's req
 Superseded intermediate jobs (uniform with "AL FAYTRI", and the sink version of c08): keyframes `8de30422-…`, `b58ab8f3-…`, `553f44c2-…`, `df62d4ad-…`, `5bf31e24-…`, `ea3db993-…`; videos `6454d0c9-…`, `77433ea5-…`, `67516369-…`, `7d5af41a-…`, `5b28f95c-…`.
 
 Cost of version 2: 136 credits (balance 2,862 → 2,726).
+
+## Version 3: official logo (2026-10-27)
+
+The interim redrawn logo was replaced with the client's official logo file (Higgsfield upload `8aca444f-ccc6-406e-a3c6-b4b9e5188e50`, 8334×8334), converted to transparent PNGs by `scripts/official_logo.py`. Only the end card and app header changed; no shots were regenerated, so this version cost 0 credits.

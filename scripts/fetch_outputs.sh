@@ -18,12 +18,12 @@ fetch() {  # url dest md5
 }
 
 mkdir -p output
-fetch $OUT_CDN/d8fdb4ac-1105-4e8f-bc7b-e2eb4c1a860c.mp4 output/heat-to-comfort_9x16_1080x1920.mp4 775557b5b24ba1dba1aedc36aa3b214d
-fetch $OUT_CDN/736ba957-30e7-41cb-8044-83d8d4506b83.mp4 output/heat-to-comfort_9x16_social.mp4    3b1db4a36e1ef79bf311ecf75c0f63cf
-fetch $OUT_CDN/73314dc6-1f07-4dd5-8387-3ba8837724b1.jpg output/storyboard.jpg                       33f64fd6dbe85afedd61c42e7b628384
-fetch $OUT_CDN/f081270f-51ae-408f-a778-fa42183eab9e.jpg output/qc_contact_sheet.jpg                 a66d182be3ab8fc517a61175b8afac0a
-fetch $OUT_CDN/95a25e8c-5612-4189-ac90-ece51365ae7c.zip output/audio_stems.zip                      75d3ec8e3e1802d8976110212d315088
-fetch $OUT_CDN/d0b7699e-6ac8-4753-be11-ee1fb6729b6d.zip output/alfaytri_logo_interim.zip            635e54d59b4494ddb70cb7109a97c4fc
+fetch $OUT_CDN/29431265-b64b-48ab-977a-89eee557a97c.mp4 output/heat-to-comfort_9x16_1080x1920.mp4 6654a5f2b2ba3560a2cd3e7532f31824
+fetch $OUT_CDN/7438bbba-2966-42a2-a12f-71dd1c40b06e.mp4 output/heat-to-comfort_9x16_social.mp4    51416923122cef7a13446bfb5872d777
+fetch $OUT_CDN/1504f6ce-86cb-4f05-866f-25b0ca30b483.jpg output/storyboard.jpg                       4742174da6a65d67699e7ef9f927c239
+fetch $OUT_CDN/45053987-8f4b-48d6-bfa0-d2a0386e2dd7.jpg output/qc_contact_sheet.jpg                 a23c447514cf8461edc92b27823c4d72
+fetch $OUT_CDN/ba01796f-0328-412f-b23f-34127e825853.zip output/audio_stems.zip                      0229763828415177a5e9a07dc47d23b5
+fetch $OUT_CDN/fafac850-8505-4f23-9026-897da3a005ff.zip output/alfaytri_logo_official_png.zip            0d7a4ca7e88ac63d07d0d11f8f445cb5
 
 [ "${1:-}" = "--sources" ] || exit 0
 

@@ -16,12 +16,12 @@
 
 | الملف | الوصف | الرابط |
 |---|---|---|
-| `heat-to-comfort_9x16_1080x1920.mp4` | النسخة الرئيسية (23 Mbps، 44 MB) | [تنزيل](https://d2ol7oe51mr4n9.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/d8fdb4ac-1105-4e8f-bc7b-e2eb4c1a860c.mp4) |
-| `heat-to-comfort_9x16_social.mp4` | نسخة الرفع للمنصات (11.5 Mbps، 22 MB) | [تنزيل](https://d2ol7oe51mr4n9.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/736ba957-30e7-41cb-8044-83d8d4506b83.mp4) |
-| `storyboard.jpg` | لوحة Storyboard للمشاهد الخمسة من إطارات المونتاج النهائي | [عرض](https://d2ol7oe51mr4n9.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/73314dc6-1f07-4dd5-8387-3ba8837724b1.jpg) |
-| `qc_contact_sheet.jpg` | 14 إطاراً للفحص البصري | [عرض](https://d2ol7oe51mr4n9.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/f081270f-51ae-408f-a778-fa42183eab9e.jpg) |
-| `audio_stems.zip` | الموسيقى، المؤثرات، أصوات المقاطع، والمزج النهائي (WAV) | [تنزيل](https://d2ol7oe51mr4n9.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/95a25e8c-5612-4189-ac90-ece51365ae7c.zip) |
-| `alfaytri_logo_interim.zip` | الشعار المؤقت (أبيض/فحمي/برتقالي، PNG شفاف) | [تنزيل](https://d2ol7oe51mr4n9.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/d0b7699e-6ac8-4753-be11-ee1fb6729b6d.zip) |
+| `heat-to-comfort_9x16_1080x1920.mp4` | النسخة الرئيسية (23 Mbps، 44 MB) | [تنزيل](https://d2ol7oe51mr4n9.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/29431265-b64b-48ab-977a-89eee557a97c.mp4) |
+| `heat-to-comfort_9x16_social.mp4` | نسخة الرفع للمنصات (11.5 Mbps، 22 MB) | [تنزيل](https://d2ol7oe51mr4n9.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/7438bbba-2966-42a2-a12f-71dd1c40b06e.mp4) |
+| `storyboard.jpg` | لوحة Storyboard للمشاهد الخمسة من إطارات المونتاج النهائي | [عرض](https://d2ol7oe51mr4n9.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/1504f6ce-86cb-4f05-866f-25b0ca30b483.jpg) |
+| `qc_contact_sheet.jpg` | 14 إطاراً للفحص البصري | [عرض](https://d2ol7oe51mr4n9.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/45053987-8f4b-48d6-bfa0-d2a0386e2dd7.jpg) |
+| `audio_stems.zip` | الموسيقى، المؤثرات، أصوات المقاطع، والمزج النهائي (WAV) | [تنزيل](https://d2ol7oe51mr4n9.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/ba01796f-0328-412f-b23f-34127e825853.zip) |
+| `alfaytri_logo_official_png.zip` | الشعار الرسمي (أبيض/فحمي/برتقالي، PNG شفاف، مع الأيقونة منفردة) | [تنزيل](https://d2ol7oe51mr4n9.cloudfront.net/user_3BiFgptSIlNEBqmFayoRfUtddGd/fafac850-8505-4f23-9026-897da3a005ff.zip) |
 
 الوثائق داخل المستودع:
 
@@ -58,20 +58,20 @@ scripts/build.sh .                   # يعيد إنتاج output/*.mp4 والف
 | الحقل | القيمة | يظهر في |
 |---|---|---|
 | `company_name` | «الفيتري» | رأس واجهة التطبيق |
-| `logo_path` / `icon_path` | الشعار المؤقت من `scripts/brand_logo.py` | بطاقة النهاية / رأس الواجهة |
+| `logo_path` / `icon_path` | الشعار الرسمي (PNG من `scripts/official_logo.py`) | بطاقة النهاية / رأس الواجهة |
 | `phone` / `whatsapp` | 4419-0600 / 5022-4440 | بطاقة النهاية |
 | `colors` | برتقالي `#EE8A2F` + فحمي `#2E2F32`، مأخوذان من القميص | الواجهات والنصوص والبطاقة |
 | `tagline` / `subline` / `cta` | «مع الفيتري خلك ضامن» / «صيانة وتنظيف مكيفات باحترافية» / «اطلب خدمتك الآن» | بطاقة النهاية |
 
 **زي الفني:** يرتدي في كل لقطاته قميص الشركة البرتقالي بأكمام وياقة فحمية والشعار على الصدر. حُذفت شارة «TEAM LEADER» والنصوص الصغيرة لأن التوليد يشوّه الكتابة الدقيقة.
 
-**الشعار مؤقت:** الشعار المطبوع على القميص صغير جداً (حوالي 130 بكسل) فلا يمكن نسخه بدقة، والنسخ الآلي أسقط نقاط «الفيتري». لذلك أعدت رسم الأيقونة (البيت والمفك والمفتاح) بأشكال هندسية مقاسة من الصورة، وكتبت تحتها «ALFAYTRI» و«الفيتري» بخط Tajawal، كل منهما كلمة واحدة بلا مسافة. عند توفر ملف الشعار الرسمي (PNG شفاف أو SVG) ضع مساره في `logo_path` و`icon_path`.
+**الشعار:** الشعار الرسمي للفيتري (`assets/brand/alfaytri_logo_official.jpg`). يحوّله `scripts/official_logo.py` إلى PNG شفاف بالألوان الثلاثة مباشرة من الملف دون إعادة رسم. النسخة المستخدمة في البناء هي الملف عالي الدقة 8334×8334 المرفوع إلى Higgsfield (`8aca444f-ccc6-406e-a3c6-b4b9e5188e50`).
 
 بعد أي تعديل شغّل `scripts/build.sh .`، ولا حاجة لإعادة توليد أي مقطع.
 
 ## عناصر ما زالت ناقصة
 
-1. **ملف الشعار الرسمي** لاستبدال النسخة المعاد رسمها، والموقع الإلكتروني إن وُجد.
+1. **الموقع الإلكتروني** إن وُجد، ليظهر في بطاقة النهاية.
 2. **واجهة التطبيق الحقيقية إن وُجدت:** الواجهتان الحاليتان تجريبيتان، وعليهما «عرض توضيحي • بيانات تجريبية». مزوّد الدفع عام («بطاقة بنكية»)، والمبلغ `--- ر.ق`، ولا يوجد رمز QR.
 3. **السعر الفعلي** إن رغبتم بإظهاره.
 4. **تنزيل الملفات إلى المستودع:** يحتاج السماح بالمضيف `d2ol7oe51mr4n9.cloudfront.net` (ومعه `d8j0ntlcm91z4.cloudfront.net` و`github.com` لإعادة البناء) في إعدادات الشبكة للبيئة، ثم تشغيل `scripts/fetch_outputs.sh`.
