@@ -8,9 +8,10 @@ fades, so CapCut's chroma key removes the background cleanly.
 
 Every frame is a pure function of time; randomness is seeded.
 
-Usage: countup.py FONT_DIR OUT_DIR
+Usage: countup.py FONT_DIR OUT_DIR [--alpha]
 Writes OUT_DIR/alfaytri_10_countup_green.mp4, ..._green_sanawat.mp4,
-       OUT_DIR/countup_sound.wav and OUT_DIR/contact_sheet.jpg
+       OUT_DIR/countup_sound.wav and OUT_DIR/contact_sheet.jpg; with --alpha also transparent
+       ProRes 4444 .mov, VP9 .webm and PNG-sequence .zip versions (no background).
 """
 import math
 import os
@@ -171,8 +172,8 @@ def ring_layer(t, sanawat):
 
 
 # ---------------------------------------------------------------- frame
-def frame(t, sanawat):
-    img = Image.new("RGBA", (W, H), GREEN + (255,))
+def frame(t, sanawat, alpha=False):
+    img = Image.new("RGBA", (W, H), (0, 0, 0, 0) if alpha else GREEN + (255,))
     img.alpha_composite(ring_layer(t, sanawat))
     if t < T10:
         n = int(np.searchsorted(STARTS, t, side="right"))
@@ -200,7 +201,7 @@ def frame(t, sanawat):
             if vis > 2:
                 crop = word.crop(((word.width - vis) // 2, 0, (word.width + vis) // 2, word.height))
                 img.alpha_composite(crop, (int(CX - crop.width / 2), int(wy - word.height / 2)))
-    return img.convert("RGB")
+    return img if alpha else img.convert("RGB")
 
 
 # ---------------------------------------------------------------- sound
@@ -297,6 +298,23 @@ def render(path, sanawat, wav):
     assert enc.wait() == 0
 
 
+def render_alpha(stem, sanawat, wav):
+    """Transparent versions: ProRes 4444 MOV (with sound), VP9 WebM (with sound), PNG frames."""
+    png_dir = stem + "_png"
+    os.makedirs(png_dir, exist_ok=True)
+    for i in range(NF):
+        frame(i / FPS, sanawat, alpha=True).save(os.path.join(png_dir, f"frame_{i:04d}.png"))
+    seq = os.path.join(png_dir, "frame_%04d.png")
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-framerate", str(FPS), "-i", seq, "-i", wav,
+                    "-c:v", "prores_ks", "-profile:v", "4444", "-pix_fmt", "yuva444p10le", "-alpha_bits", "16",
+                    "-vendor", "apl0", "-c:a", "pcm_s16le", "-shortest", stem + ".mov"], check=True)
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-framerate", str(FPS), "-i", seq, "-i", wav,
+                    "-c:v", "libvpx-vp9", "-pix_fmt", "yuva420p", "-b:v", "0", "-crf", "18", "-row-mt", "1",
+                    "-auto-alt-ref", "0", "-c:a", "libopus", "-b:a", "192k", "-shortest", stem + ".webm"], check=True)
+    subprocess.run(["zip", "-qj", stem + "_png.zip"] + sorted(
+        os.path.join(png_dir, f) for f in os.listdir(png_dir)), check=True)
+
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     raw = os.path.join(OUT, "countup_sound_raw.wav")
@@ -308,6 +326,9 @@ def main():
     os.remove(raw)
     render(os.path.join(OUT, "alfaytri_10_countup_green.mp4"), False, wav)
     render(os.path.join(OUT, "alfaytri_10_countup_green_sanawat.mp4"), True, wav)
+    if "--alpha" in sys.argv:
+        render_alpha(os.path.join(OUT, "alfaytri_10_countup_transparent"), False, wav)
+        render_alpha(os.path.join(OUT, "alfaytri_10_countup_transparent_sanawat"), True, wav)
     # contact sheet for review: the count, the hit, the shine, the end
     times = [STARTS[0] + 0.1, STARTS[4] + 0.05, STARTS[8] + 0.05, T10 + 0.03, T10 + 0.8, T10 + 2.25, DUR - 0.05]
     tiles = [frame(t, s).resize((270, 480)) for s in (False, True) for t in times]

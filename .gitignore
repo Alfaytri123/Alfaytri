@@ -7,3 +7,6 @@ audio/
 qc/
 __pycache__/
 assets/brand/official/
+output/anniversary/*.mov
+output/anniversary/*_png/
+output/anniversary/*_png.zip
